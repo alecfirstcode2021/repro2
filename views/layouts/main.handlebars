@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeFyte</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="hero">
+        <div>
+          <nav class"nav">
+                  <a class="link" href="/">Home</a>
+                  <a class="link" href="/dashboard">Dashboard</a>
+                  {{#if loggedIn}}
+                  <a class="link" href="/" id="logout">Logout</a>
+                  {{else}}
+                  <a class="link" href="/login">Login</a>
+                  {{/if}}
+              </nav>          
+        </div>
+
+        <h1 class="app-title"><i class="fab "></i>
+          <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/210503/0bf90e796fc48bff1eefbfeb27832600.png" alt="pokemon-font" border="0"></a></h1>
+    </header>
+
+  <main>
+    {{{ body }}}
+  </main>
+</div>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
